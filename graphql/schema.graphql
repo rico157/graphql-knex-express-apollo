@@ -1,0 +1,13 @@
+type City {
+  city_id: ID!
+  city_name: String!
+}
+
+type Query {
+  cities: [City]
+  city(city_id: ID!): City
+}
+type Mutation {
+  addCity(city_name: String!): City!
+  updateCity(city_id: ID!, city_name: String!): City!
+}
